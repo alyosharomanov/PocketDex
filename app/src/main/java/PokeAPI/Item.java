@@ -1,0 +1,4 @@
+package PokeAPI;
+
+class Item {
+}

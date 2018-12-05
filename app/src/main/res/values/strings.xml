@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PocketDex</string>
+    <string name="previous"><![CDATA[<—]]></string>
+    <string name="next"><![CDATA[—>]]></string>
+    <string name="menu">menu</string>
+    <string name="credits">Credits</string>
+    <string name="pokedex">Pokedex</string>
+</resources>

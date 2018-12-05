@@ -1,0 +1,7 @@
+package PokeAPI;
+
+class Move {
+
+
+
+}

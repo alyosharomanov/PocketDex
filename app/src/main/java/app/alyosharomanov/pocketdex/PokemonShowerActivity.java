@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.json.JSONException;
@@ -62,10 +63,14 @@ public class PokemonShowerActivity extends AppCompatActivity {
         Button next = (Button) findViewById(R.id.next);
 
         //set all elements
+
         new SetImage(image).execute(pokemon.getUrl());
 
-        name.setText(pokemon.getName().substring(0, 1).toUpperCase() + pokemon.getName().substring(1));
-        current.setText(String.valueOf(pokemon.getId()));
+        String nameCreator = (pokemon.getName().substring(0, 1).toUpperCase() + pokemon.getName().substring(1))
+                .replaceAll("-aria","")
+                .replaceAll("-ordinary","")
+                .replaceAll("-incarnate","");
+        name.setText(nameCreator);
 
         previous.setOnClickListener(new View.OnClickListener() {
             @Override

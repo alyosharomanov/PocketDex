@@ -5,9 +5,10 @@
     <color name="colorAccent">#D81B60</color>
 
 
-    <color name="background">#ff000c</color>
-    <color name="background_dark">#a50004</color>
-    <color name="text">#ffc942</color>
-    <color name="background_grey">#363636</color>
+    <color name="background">#d50000</color>
+    <color name="background_dark">#b71c1c</color>
+    <color name="text">#ffd740</color>
+    <color name="background_grey">#263238</color>
+    <color name="background_grey_light">#f5f5f5</color>
     <color name="white">#ffffff</color>
 </resources>

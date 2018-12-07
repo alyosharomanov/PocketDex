@@ -33,7 +33,8 @@
             android:shadowDx="1.5"
             android:shadowDy="1.3"
             android:shadowRadius="20.0"
-            android:text="@string/pokedex"
+            android:letterSpacing="0"
+            android:text="@string/app_name"
             android:textColor="@color/text"
             android:textSize="70sp" />
 

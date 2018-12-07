@@ -8,9 +8,10 @@ import org.json.JSONObject;
 
 public class Pokemon {
     private String name;
-    private String nickname;
-    private String species;
+    private String description;
     private int id;
+    private int height;
+    private int weight;
     private int speed;
     private int current_speed;
     private int specialDefense;
@@ -34,8 +35,10 @@ public class Pokemon {
 
     Pokemon(JSONObject data) throws JSONException {
         this.name = data.getString("name");
-        this.species = data.getJSONObject("species").getString("name");
+        this.description = data.getString("description");
         this.id = data.getInt("id");
+        this.height = data.getInt("height");
+        this.weight = data.getInt("weight");
         this.speed = data.getJSONArray("stats").getJSONObject(0).getInt("base_stat");
         this.specialDefense = data.getJSONArray("stats").getJSONObject(1).getInt("base_stat");
         this.specialAttack = data.getJSONArray("stats").getJSONObject(2).getInt("base_stat");
@@ -44,20 +47,27 @@ public class Pokemon {
         this.hp = data.getJSONArray("stats").getJSONObject(5).getInt("base_stat");
         this.url = data.getJSONObject("sprites").getString("front_default");
 
-        this.types = new String[data.getJSONArray("types").length()];
-        for (int i = 0; i < data.getJSONArray("types").length(); i++) {
-            types[i] = data.getJSONArray("types").getJSONObject(i).getJSONObject("type").getString("name");
+        int length = data.getJSONArray("types").length();
+        this.types = new String[length];
+        for (int i = 0; i < length; i++) {
+            types[i] = data.getJSONArray("types").getJSONObject(length - 1 - i).getJSONObject("type").getString("name");
         }
     }
 
     public String getName() {
         return name;
     }
-    public String getSpecies() {
-        return species;
+    public String getDescription() {
+        return description;
     }
     public int getId() {
         return id;
+    }
+    public int getHeight() {
+        return height;
+    }
+    public int getWeight() {
+        return weight;
     }
     public int getSpeed() {
         return speed;

@@ -11,9 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PokemonShowerActivity"></activity>
-        <activity android:name=".CreditsActivity"></activity>
-        <service android:enabled="true" android:name=".BackgroundSoundService" />
+        <activity android:name=".PokemonShowerActivity" />
+        <activity android:name=".CreditsActivity" />
+
+        <service
+            android:name=".BackgroundSoundService"
+            android:enabled="true" />
 
         <activity
             android:name=".LoadingScreenActivity"
@@ -24,6 +27,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PokemonListActivity"
+            android:label="@string/title_activity_pokemon_list"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

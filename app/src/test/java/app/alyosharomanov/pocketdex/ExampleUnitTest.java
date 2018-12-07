@@ -1,6 +1,12 @@
 package app.alyosharomanov.pocketdex;
 
+import org.json.JSONException;
 import org.junit.Test;
+
+import java.io.IOException;
+
+import PokeAPI.Interface;
+import PokeAPI.Pokemon;
 
 import static org.junit.Assert.*;
 
@@ -10,8 +16,4 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class ExampleUnitTest {
-    @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
-    }
 }

@@ -10,13 +10,17 @@ public class CreditsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_credits);
+        updateFullScreen();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
-        //set fullscreen on all systems
+        updateFullScreen();
+    }
+
+    private void updateFullScreen() {
         getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                         | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION

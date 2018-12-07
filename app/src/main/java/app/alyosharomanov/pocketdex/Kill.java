@@ -1,0 +1,12 @@
+package app.alyosharomanov.pocketdex;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+public class Kill extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        finishAndRemoveTask();
+    }
+}

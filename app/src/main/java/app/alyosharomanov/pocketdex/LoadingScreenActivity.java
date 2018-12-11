@@ -49,8 +49,8 @@ public class LoadingScreenActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
         updateFullScreen();
     }
 
@@ -62,5 +62,8 @@ public class LoadingScreenActivity extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
+        if (getActionBar() != null) {
+            getActionBar().hide();
+        }
     }
 }

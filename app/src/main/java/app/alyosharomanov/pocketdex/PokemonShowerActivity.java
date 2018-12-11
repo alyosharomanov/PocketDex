@@ -23,10 +23,12 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.PopupMenu;
 import android.util.AndroidException;
 import android.util.Log;
+import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
@@ -173,7 +175,7 @@ public class PokemonShowerActivity extends AppCompatActivity {
             public void onClick(View v) {
                 MenuDialog menuDialog = new MenuDialog();
                 menuDialog.show(getSupportFragmentManager(), "MenuDialog");
-            }});
+        }});
 
 
         //back and forward buttons
@@ -194,14 +196,15 @@ public class PokemonShowerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int value = curr_pokemon + 1;
-                if (value > 949) {
-                    value = 949;
+                if (value > Interface.MAX_LENGTH - 1) {
+                    value = Interface.MAX_LENGTH - 1;
                 }
                 Intent launchSettingsIntent = new Intent(PokemonShowerActivity.this, PokemonShowerActivity.class);
                 launchSettingsIntent.putExtra("curr_pokemon", value);
                 startActivityForResult(launchSettingsIntent, SETTINGS_INT);
             }
         });
+        updateFullScreen();
     }
 
     @Override
@@ -215,6 +218,7 @@ public class PokemonShowerActivity extends AppCompatActivity {
         super.onWindowFocusChanged(hasFocus);
         updateFullScreen();
     }
+
 
     private class SetImageCanvas extends AsyncTask<String, Void, Bitmap> {
         ImageView bmImage;
@@ -312,6 +316,9 @@ public class PokemonShowerActivity extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
+        if (getActionBar() != null) {
+            getActionBar().hide();
+        }
     }
 
     public static int darker (int color, float factor) {

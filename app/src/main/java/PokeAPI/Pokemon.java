@@ -34,7 +34,21 @@ public class Pokemon {
     private String[] types;
 
     Pokemon(JSONObject data) throws JSONException {
-        this.name = data.getString("name");
+        this.name = data.getString("name")
+                .replaceAll("-ordinary","")
+                .replaceAll("-incarnate","")
+                .replaceAll("-f","")
+                .replaceAll("-m","")
+                .replaceAll("-normal","")
+                .replaceAll("-standard","")
+                .replaceAll("-average","")
+                .replaceAll("-plant","")
+                .replaceAll("-altered","")
+                .replaceAll("-land","")
+                .replaceAll("-striped","")
+                .replaceAll("-shield","")
+                .replaceAll("-aria","")
+                .replaceAll("-red","");
         this.description = data.getString("description");
         this.id = data.getInt("id");
         this.height = data.getInt("height");

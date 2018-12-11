@@ -6,8 +6,8 @@ android {
         applicationId "app.alyosharomanov.pocketdex"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+            versionName "beta-1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -15,6 +15,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    dataBinding{
+        enabled=true
     }
 }
 

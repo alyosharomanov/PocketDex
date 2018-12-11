@@ -7,7 +7,7 @@ import android.os.IBinder;
 
 public class BackgroundSoundService extends Service {
     private static final String TAG = null;
-    MediaPlayer player;
+    static MediaPlayer player;
     public IBinder onBind(Intent arg0) {
 
         return null;
@@ -33,8 +33,14 @@ public class BackgroundSoundService extends Service {
         return null;
     }
 
-    public void onStop() {
-
+    public static void onStop() {
+        if (player != null) {
+            if (player.isPlaying()) {
+                player.pause();
+            } else {
+                player.start();
+            }
+        }
     }
     public void onPause() {
 
@@ -47,6 +53,7 @@ public class BackgroundSoundService extends Service {
 
     @Override
     public void onLowMemory() {
-
+        onDestroy();
     }
+
 }

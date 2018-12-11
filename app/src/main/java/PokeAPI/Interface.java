@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 public class Interface {
 
-    final static int MAX_LENGTH = 719;
+    public final static int MAX_LENGTH = 721;
 
     private static JSONObject toJSON(String uri) throws IOException, JSONException {
         String responseString = "";
@@ -128,11 +128,20 @@ public class Interface {
         String[] returnString = new String[MAX_LENGTH];
         for (int i = 0; i < MAX_LENGTH; i++) {
             returnString[i] = pokemonList.getJSONObject(i).getString("name")
-                    .replaceAll("-aria","")
                     .replaceAll("-ordinary","")
                     .replaceAll("-incarnate","")
                     .replaceAll("-f","")
-                    .replaceAll("-m","");
+                    .replaceAll("-m","")
+                    .replaceAll("-normal","")
+                    .replaceAll("-standard","")
+                    .replaceAll("-average","")
+                    .replaceAll("-plant","")
+                    .replaceAll("-altered","")
+                    .replaceAll("-land","")
+                    .replaceAll("-striped","")
+                    .replaceAll("-shield","")
+                    .replaceAll("-aria","")
+                    .replaceAll("-red","");
         }
         return returnString;
     }

@@ -6,8 +6,8 @@ android {
         applicationId "app.alyosharomanov.pocketdex"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 3
-            versionName "beta-1.1"
+        versionCode 4
+            versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

@@ -39,7 +39,7 @@ class Type {
         attackSearch[convert.get("normal")][convert.get("rock")] = 0.5;
         attackSearch[convert.get("normal")][convert.get("ghost")] = 0.0;
         attackSearch[convert.get("normal")][convert.get("steel")] = 0.5;
-        //TODO fill out the rest of these fuckers
+        //TODO fill out the rest of these
     }
 
     static double getMultiplier(String move, Pokemon defender) {

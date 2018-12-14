@@ -94,12 +94,7 @@ public class PokemonShowerActivity extends AppCompatActivity {
         new SetImageCanvas(image).execute(pokemon.getUrl());
 
         //name of pokemon
-        String nameCreator = (pokemon.getName().substring(0, 1).toUpperCase() + pokemon.getName().substring(1))
-                .replaceAll("-aria","")
-                .replaceAll("-ordinary","")
-                .replaceAll("-incarnate","")
-                .replaceAll("-f","")
-                .replaceAll("-m","");
+        String nameCreator = pokemon.getName().substring(0, 1).toUpperCase() + pokemon.getName().substring(1);
         title.setText(nameCreator);
 
         //pokemon text

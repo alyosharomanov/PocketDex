@@ -62,13 +62,13 @@ public class Interface {
     }
 
     private static JSONArray getPokemonArray() throws IOException, JSONException {
-        String uri = "https://pokeapi.co/api/v2/";
+        String uri = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=721";
         JSONObject jsonObjList = toJSON(uri);
-        return toJSON(jsonObjList.getString("pokemon")).getJSONArray("results");
+        return jsonObjList.getJSONArray("results");
     }
 
     private static JSONArray getPokedexArray() throws IOException, JSONException {
-        String uri = "https://pokeapi.co/api/v2/pokedex/national/";
+        String uri = "https://pokeapi.co/api/v2/pokedex/national/?offset=0&limit=721";
         JSONObject jsonObjList = toJSON(uri);
         return jsonObjList.getJSONArray("pokemon_entries");
     }

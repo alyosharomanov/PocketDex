@@ -54,16 +54,6 @@
                     android:text="Search" />
 
                 <Button
-                    android:id="@+id/music_toggle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:fontFamily="@font/pokemon_classic"
-                    android:background="@color/background_grey"
-                    android:textSize="16sp"
-                    android:text="Toggle Music" />
-
-                <Button
                     android:id="@+id/menu_credits"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

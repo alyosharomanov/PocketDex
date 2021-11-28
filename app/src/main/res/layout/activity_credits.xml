@@ -101,40 +101,6 @@
                         app:autoSizeStepGranularity="2sp"
                         app:autoSizeTextType="uniform" />
 
-                    <TextView
-                        android:id="@+id/name_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pokemon_classic"
-
-                        android:gravity="center"
-                        android:text="@string/lorenzo"
-                        app:autoSizeMaxTextSize="100sp"
-                        app:autoSizeMinTextSize="16sp"
-                        app:autoSizeStepGranularity="2sp"
-                        app:autoSizeTextType="uniform" />
-
-                    <TextView
-                        android:id="@+id/name_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="7dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pokemon_classic"
-                        android:gravity="center"
-
-                        android:text="@string/noah"
-                        android:textSize="20sp"
-                        app:autoSizeMaxTextSize="100sp"
-                        app:autoSizeMinTextSize="10sp"
-                        app:autoSizeStepGranularity="2sp"
-                        app:autoSizeTextType="uniform" />
-
                 </LinearLayout>
 
                 <LinearLayout

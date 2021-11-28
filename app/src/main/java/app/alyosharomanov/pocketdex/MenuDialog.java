@@ -34,7 +34,6 @@ public class MenuDialog extends DialogFragment {
         dialog.setCanceledOnTouchOutside(true);
 
         Button search = (Button) layout.findViewById(R.id.menu_search);
-        Button music = (Button) layout.findViewById(R.id.music_toggle);
         Button credits = (Button) layout.findViewById(R.id.menu_credits);
         Button back = (Button) layout.findViewById(R.id.menu_back);
 
@@ -43,13 +42,6 @@ public class MenuDialog extends DialogFragment {
             public void onClick(View v) {
                 Intent launchSettingsIntent = new Intent(getContext(), SearchActivity.class);
                 startActivityForResult(launchSettingsIntent, SETTINGS_INT);
-            }
-        });
-
-        music.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                BackgroundSoundService.onStop();
             }
         });
 

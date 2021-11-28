@@ -29,10 +29,6 @@ public class LoadingScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_loading_screen);
         updateFullScreen();
 
-        //start music
-        Intent music = new Intent(getApplicationContext(), BackgroundSoundService.class);
-        startService(music);
-
         TextView loadingText = (TextView) findViewById(R.id.loadingText);
         Animation fadeIn = new AlphaAnimation(0, 1);
         fadeIn.setInterpolator(new DecelerateInterpolator());
